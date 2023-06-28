@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.html import format_html
+from django.contrib.auth.models import AbstractUser
 
 
 
@@ -16,7 +17,7 @@ class Category(models.Model):
     add_date = models.DateTimeField(auto_now_add=True, null=True)
 
     def imgshow(self):
-        return format_html(' <img src="/media/{}" style="width:40px;height:40px;border-radius:510%;"/>'.format(self.img))
+        return format_html(' <img src="/media/{}" style="width:40px;height:40px;border-radius:510%;"/>'.format(self.image))
 
     def __str__(self):
         return self.title
@@ -31,3 +32,5 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+

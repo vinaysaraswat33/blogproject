@@ -13,8 +13,11 @@
     <ul class="right hide-on-med-and-down">
       <li><a href="/about">About</a></li>
       <li><a href="/admin">Admin</a></li>
-      <!-- Dropdown Trigger -->
-      <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Category<i class="material-icons right">arrow_drop_down</i></a></li>
+<!--      <li><a href="/login">Login</a> </li>-->
+<!--      <li><a href="/signup">Sign-up</a> </li>-->
+      <li><a href="{% url 'blog:login' %}">Login</a></li>
+      <li><a href="{% url 'blog:signup' %}">Sign Up</a></li>
+
     </ul>
      </div>
   </div>
